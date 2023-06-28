@@ -46,3 +46,8 @@ export const getPop = (value: number): string => {
 
   return 'High probability'
 }
+
+export const getCelsius = (temp: number): number => {
+  const celsius = (temp - 273.15)
+  return parseFloat(celsius.toFixed(1))
+}
