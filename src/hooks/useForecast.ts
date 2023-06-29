@@ -38,13 +38,19 @@ const useForecast = () => {
         if (city) { setTerm(city.name) }
         setOptions([])
     }, [city])
+    
+    const clearResult = () => {
+        setForecast(null)
+    }
+
     return {
         term,
         options,
         forecast,
         onInputChange,
         onOptionSelect,
-        onSubmit
+        onSubmit,
+        clearResult
     }
 }
 

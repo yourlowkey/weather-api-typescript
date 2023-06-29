@@ -10,13 +10,16 @@ import {
     getSunTime,
     getCelsius
   } from './../helpers'
+import ClearResultButton from "./ClearResultButton"
 type Props = {
-    data: ForecastType
+    data: ForecastType,
+    clearResult:()=>void
   }
-const Forecast = ({data}:Props) => {
+const Forecast = ({data,clearResult}:Props) => {
     const today = data
   return (
     <div className="w-full md:max-w-[500px] py-4 md:py-4 md:px-10 lg:px-24 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
+        <ClearResultButton clearResult={clearResult}/>
     <div className="mx-auto w-[300px]">
       <section className="text-center">
         <h2 className="text-2xl font-black">
